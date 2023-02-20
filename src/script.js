@@ -1,4 +1,5 @@
 const filterBtn = document.getElementById('filter-btn');
+
 const filterDropdown = document.getElementById('filter-dropdown');
 
 filterBtn.addEventListener('click', function() {
