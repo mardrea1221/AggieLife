@@ -1,0 +1,119 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #033266;
+	color: white;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	margin: 0;
+}
+
+nav {
+  display: flex;
+	padding: 10px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+form {
+	width: 33%;
+}
+
+/* text input */
+input[type="text"] {
+	height: 100%;
+	width: 100%;
+}
+
+/* search button */
+button[type="search"] {
+	color: black;
+}
+
+/* dropdown <a> style */
+.dropdown a {
+	color: black;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+
+/* styling the categories inside dropdown */
+.dropdown #filter-dropdown {
+	background-color: #f4f4f4;
+	display: none;
+  position: absolute;
+  z-index: 1;
+  overflow-y: auto;
+	
+}
+
+/* dropdown text hover style */
+.dropdown a:hover {
+	background-color: white;
+	color: #333;
+}
+
+/* dropdown text activated style */
+.dropdown a.active {
+	background-color: rgb(226, 10, 10);
+	color: #333;
+}  
+  
+/* dropdown button */
+.dropdown #filter-btn {
+	color: rgb(0, 0, 0);
+	font-size: 25px;
+	border: none;
+	cursor: pointer;
+}
+
+/* entire grid container */
+.tile-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 250px);
+	grid-gap: 20px;
+}
+
+/* each cell in the grid */
+.tile {
+	background-color: #a5afc9;
+	border-radius: 4px;
+	padding: 20px;
+}
+
+/* pagination div */
+.pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+/* pagination text */
+.pagination a {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+/* each pagination box when clicked (activated) */
+.pagination a.active {
+	background-color: #0d77be;
+	color: white;
+}
+
+/* each pagination box when not activated */
+.pagination a:hover:not(.active) {
+	background-color: #f4f4f4;
+	color: black;
+}
