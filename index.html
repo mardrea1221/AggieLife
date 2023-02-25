@@ -4,12 +4,35 @@
     <title>My Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="src/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+        $("#header").load("header.html");
+      });
+    </script>
   </head>
   <body>
-    <header>
-      <h1>Aggie Life</h1>
-    </header>
+    <div id="header"></div>
+    <!-- </head>
     
+      <header>
+        <div id="container1">
+          <div class="Aggie">
+            <h1>AGGIE LIFE</h1>
+          </div>
+          <div id="options">
+            <a href="#" class="option">Home</a>
+            <a href="#" class="option">Groups</a>
+            <a href="#" class="option">News</a>
+            <a href="#" class="option">Forms</a>
+            <a href="#" class="option">Using AggieLife</a>
+          </div>
+          <div id="signin"> 
+            <a href="#" id="sign">Sign In</a>
+          </div>
+        </div>
+          
+      </header> -->
     <main>
 			<nav>
 				<!-- Filter -->
