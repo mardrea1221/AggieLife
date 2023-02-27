@@ -26,13 +26,11 @@ h1 {
 /* options next to AggieLife */
 .option{
 	color:white;
-	font-weight: 500;
+	font-weight: 350;
 	text-decoration: none;	
 	padding: 14px 20px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont
 }
-/* .option:hover{
-	background-color: #FFBF00;
-} */
 
 #option-group{
 	color:black;
@@ -44,13 +42,6 @@ h1 {
 	
 }
 
-/* #options{
-	color:black;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-} */
-
 #sign{
 	color:white;
 	text-decoration: none;	
@@ -58,28 +49,47 @@ h1 {
 
 nav {
 	display: flex;
-	
-	padding: 40px;
+	padding: 40px; 
 	flex-direction: row;
 	justify-content: space-evenly;
 }
 
-form {
-	width: fit-content;
-  box-sizing: border-box;
-	width: 33%;
+/* form {
+	/* width: fit-content;  */
+  	/* box-sizing: border-box; */
+  	/* width: 500px;
+	height: ; 
 }
+*/
 
 /* text input */
 input[type="text"] {
-	height: 100%;
-	width: 100%;
+	height: 60px;
+	width: 500px; 
+	border-radius: 1000px; 
+	border-color: white;
+	border: none;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
+input:focus{
+	outline-color: none;
+	box-shadow: none;
+}
+#search-btn{
+	width: 120px;
+	height: 60px;
+	border: none;
+	border-radius: 1000px;
+	background-color: #133162;
+	color: white;
+	font-size: 20px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	
+}
 /* search button */
 button[type="search"] {
-	color: black;
-}
+	color: white;
+} 
 
 /* dropdown <a> styling */
 .dropdown a {
@@ -115,9 +125,13 @@ button[type="search"] {
 .dropdown #filter-btn {
 	background-color: #133162;
 	color: white;
-	font-size: 25px;
+	font-size: 20px;
 	border: none;
 	cursor: pointer;
+	border-radius: 1000px;
+	width: 120px;
+	height: 60px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* entire grid container */
@@ -159,6 +173,10 @@ button[type="search"] {
 .pagination a.active {
 	background-color: #133162;
 	color: white;
+	border-radius: 50%;
+	padding-left: 12px;
+	padding-right: 12px;
+
 }
 
 /* each pagination box when not activated */

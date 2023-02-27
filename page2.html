@@ -13,33 +13,33 @@
   </head>
   <body>
     <div id="header"></div>
-    
     <main>
 			<nav>
 				<!-- Filter -->
         <div class="dropdown">
 					<button id="filter-btn">Filter</button>
 					<div id="filter-dropdown">
-						<a href="#">Category 1</a>
-						<a href="#">Category 2</a>
-						<a href="#">Category 3</a>
+						<a href="#" data-category="Category 1">Category 1</a>
+						<a href="#" data-category="Category 2">Category 2</a>
+						<a href="#" data-category="Category 3">Category 3</a>
 					</div>
 				</div>
 
 				<!-- Search Textfield -->
-				<form>
-					<input type="text" placeholder="Search...">
-				</form>
+        <form>
+          <input type="text" placeholder="Search for exciting opportunities..." id="search-input">
+        </form>
 
 				<!-- Search Button -->
-				<button type="search">Search
-          <img src="assets/mag_glass.png" alt="search" width="10" height="10">
+				<button type="button" id="search-btn">Settings
+          <!-- <img src="assets/mag_glass.png" alt="search" width="10" height="10"> -->
         </button>
 
       </nav>
 
       <div class="tile-container">
-        <div class="tile">Club 1
+        <div class="tile" data-categories="Category 3,Category 1">Club 1
+          <div class="description">Description of Club 1</div>
           <div id="socials">
             <img src="assets/icons8-discord.svg" alt="discord" width="25" height="25">
             <img src="assets/icons8-facebook.svg" alt="facebook" width="25" height="25">
@@ -47,7 +47,8 @@
             <img src="assets/icons8-whatsapp.svg" alt="whatsapp" width="25" height="25">
           </div>
         </div>
-        <div class="tile">Club 2
+        <div class="tile" data-categories="Category 1,Category 3">Club 2
+          <div class="description">Description of Club 2</div>
           <div id="socials">
             <img src="assets/icons8-discord.svg" alt="discord" width="25" height="25">
             <img src="assets/icons8-facebook.svg" alt="facebook" width="25" height="25">
@@ -55,7 +56,8 @@
             <img src="assets/icons8-whatsapp.svg" alt="whatsapp" width="25" height="25">
           </div>
         </div>
-        <div class="tile">Club 3
+        <div class="tile" data-categories="Category 2,Category 3">Club 3
+          <div class="description">Description of Club 3</div>
           <div id="socials">
             <img src="assets/icons8-discord.svg" alt="discord" width="25" height="25">
             <img src="assets/icons8-facebook.svg" alt="facebook" width="25" height="25">
@@ -63,7 +65,8 @@
             <img src="assets/icons8-whatsapp.svg" alt="whatsapp" width="25" height="25">
           </div>
         </div>
-        <div class="tile">Club 4
+        <div class="tile" data-categories="Category 1,Category 2">Club 4
+          <div class="description">Description of Club 4</div>
           <div id="socials">
             <img src="assets/icons8-discord.svg" alt="discord" width="25" height="25">
             <img src="assets/icons8-facebook.svg" alt="facebook" width="25" height="25">
@@ -71,7 +74,8 @@
             <img src="assets/icons8-whatsapp.svg" alt="whatsapp" width="25" height="25">
           </div>
         </div>
-        <div class="tile">Club 5
+        <div class="tile" data-categories="Category 2">Club 5
+          <div class="description">Description of Club 5</div>
           <div id="socials">
             <img src="assets/icons8-discord.svg" alt="discord" width="25" height="25">
             <img src="assets/icons8-facebook.svg" alt="facebook" width="25" height="25">
@@ -79,7 +83,8 @@
             <img src="assets/icons8-whatsapp.svg" alt="whatsapp" width="25" height="25">
           </div>
         </div>
-        <div class="tile">Club 6
+        <div class="tile" data-categories="Category 1">Club 6
+          <div class="description">Description of Club 6</div>
           <div id="socials">
             <img src="assets/icons8-discord.svg" alt="discord" width="25" height="25">
             <img src="assets/icons8-facebook.svg" alt="facebook" width="25" height="25">
@@ -90,7 +95,7 @@
       </div>
       <div class="pagination">
         <a href="index.html">1</a>
-        <a href="page2.html" class="active">2</a>
+        <a href="page2.html" class="active" >2</a>
         <a href="page3.html">3</a>
         <a href="page4.html">4</a>
         <a href="page5.html">5</a>
