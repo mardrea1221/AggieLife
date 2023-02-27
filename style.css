@@ -1,13 +1,14 @@
 body {
+	background-color: #f0f4f4;
 	font-family: sans-serif;
 	margin: 0;
 	padding: 0;
 }
 
 header {
-	background-color: #033266;
+	background-color: #133162;
 	color: white;
-	padding: 20px;
+	padding: 5px 20px;
 	display: flex;
 	flex-direction: column;
 }
@@ -18,25 +19,37 @@ h1 {
 #container1{
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: center; 
 	justify-content: space-between;
-	
 }
+
 /* options next to AggieLife */
 .option{
 	color:white;
+	font-weight: 500;
 	text-decoration: none;	
-	padding: 10px;
+	padding: 14px 20px;
 }
-.option:hover{
+/* .option:hover{
 	background-color: #FFBF00;
+} */
 
+#option-group{
+	color:black;
+	background-color: #F6C749;
+	font-weight: 600;
+
+	/* max border radius */
+	border-radius: 1000px;
+	
 }
-options{
+
+/* #options{
+	color:black;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-}
+} */
 
 #sign{
 	color:white;
@@ -44,13 +57,16 @@ options{
 }
 
 nav {
-  display: flex;
-	padding: 10px;
-  flex-direction: row;
-  justify-content: space-around;
+	display: flex;
+	
+	padding: 40px;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
 
 form {
+	width: fit-content;
+  box-sizing: border-box;
 	width: 33%;
 }
 
@@ -77,9 +93,9 @@ button[type="search"] {
 .dropdown #filter-dropdown {
 	background-color: #f4f4f4;
 	display: none;
-  position: absolute;
-  z-index: 1;
-  overflow-y: auto;
+	position: absolute;
+	z-index: 1;
+	overflow-y: auto;
 	
 }
 
@@ -97,8 +113,8 @@ button[type="search"] {
   
 /* dropdown button */
 .dropdown #filter-btn {
-	color: rgb(0, 0, 0);
-	font-family: Arial, Helvetica, sans-serif;
+	background-color: #133162;
+	color: white;
 	font-size: 25px;
 	border: none;
 	cursor: pointer;
@@ -110,14 +126,18 @@ button[type="search"] {
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, 250px);
 	grid-gap: 20px;
+
+	/* add left-right padding */
+	padding: 0px 20px;
 }
 
 /* each cell in the grid */
 .tile {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #a5afc9;
-	border-radius: 4px;
+	background-color: white;
+	border-radius: 15px;
 	padding: 20px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* pagination div */
@@ -137,12 +157,12 @@ button[type="search"] {
 
 /* each pagination box when clicked (activated) */
 .pagination a.active {
-	background-color: #0d77be;
+	background-color: #133162;
 	color: white;
 }
 
 /* each pagination box when not activated */
 .pagination a:hover:not(.active) {
-	background-color: #f4f4f4;
+	background-color: #EFF2F5;
 	color: black;
 }
