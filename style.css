@@ -19,10 +19,19 @@ header {
 	flex-direction: row;
 	justify-content: space-between;	
 }
-#signlogo{
-	padding-right: 5px;
+
+#sign{
+	color:white;
+	text-decoration: none;	
+	background: url('assets/exit_to_app_FILL0_wght400_GRAD0_opsz48.png') no-repeat left;
+	background-size: 25px;
+	filter: brightness(0) invert(1);
+}
+a span {
+	padding-left: 30px;
 }
 
+​
 h1 {
 	margin: 0;
 }
@@ -52,10 +61,7 @@ h1 {
 	
 }
 
-#sign{
-	color:white;
-	text-decoration: none;	
-}
+
 
 nav {
 	display: flex;
