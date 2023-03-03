@@ -8,6 +8,7 @@
     <script>
       $(function(){
         $("#header").load("header.html");
+        $("#nav").load("nav.html");
       });
     </script>
   </head>
@@ -15,29 +16,7 @@
     <div id="header"></div>
     
     <main>
-			<nav>
-				<!-- Filter -->
-        <div class="dropdown">
-					<button id="filter-btn">Filter</button>
-					<div id="filter-dropdown">
-						<a href="#">Category 1</a>
-						<a href="#">Category 2</a>
-						<a href="#">Category 3</a>
-					</div>
-				</div>
-
-				<!-- Search Textfield -->
-				<form>
-					<input type="text" placeholder="Search...">
-				</form>
-
-				<!-- Search Button -->
-				<button type="search">Search
-          <img src="assets/mag_glass.png" alt="search" width="10" height="10">
-        </button>
-
-      </nav>
-
+			<div id="nav"></div>
       <div class="tile-container">
         <div class="tile">Club 1
           <div id="socials">

@@ -8,34 +8,14 @@
     <script>
       $(function(){
         $("#header").load("header.html");
+        $("#nav").load("nav.html");
       });
     </script>
   </head>
   <body>
     <div id="header"></div>
     <main>
-			<nav>
-				<!-- Filter -->
-        <div class="dropdown">
-					<button id="filter-btn">Filter</button>
-					<div id="filter-dropdown">
-						<a href="#" data-category="Category 1">Category 1</a>
-						<a href="#" data-category="Category 2">Category 2</a>
-						<a href="#" data-category="Category 3">Category 3</a>
-					</div>
-				</div>
-
-				<!-- Search Textfield -->
-        <form>
-          <input type="text" placeholder="Search for exciting opportunities..." id="search-input">
-        </form>
-
-				<!-- Search Button -->
-				<button type="button" id="search-btn">Settings
-          <!-- <img src="assets/mag_glass.png" alt="search" width="10" height="10"> -->
-        </button>
-
-      </nav>
+			<div id="nav"></div>
 
       <div class="tile-container">
         <div class="tile" data-categories="Category 3,Category 1">Club 1
