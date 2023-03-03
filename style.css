@@ -130,16 +130,6 @@ button[type="search"] {
 	text-decoration: none;
 }
 
-/* styling the categories inside dropdown */
-.dropdown #filter-dropdown {
-	background-color: #f4f4f4;
-	display: none;
-	position: absolute;
-	z-index: 1;
-	overflow-y: auto;
-	
-}
-
 /* dropdown text hover style */
 .dropdown a:hover {
 	background-color: white;
@@ -151,7 +141,16 @@ button[type="search"] {
 	background-color: rgb(226, 10, 10);
 	color: #333;
 }  
-  
+
+/* styling the categories inside dropdown */
+.dropdown #filter-dropdown {
+	background-color: #f4f4f4;
+	display: none;
+	position: absolute;
+	z-index: 1;
+	overflow-y: auto;
+	
+}
 /* dropdown button */
 .dropdown #filter-btn {
 	background-color: #133162;
@@ -163,6 +162,14 @@ button[type="search"] {
 	width: 120px;
 	height: 60px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#filt{
+	padding-left: 30px;
+}
+#filter-btn{
+	background: url("assets/flter_icon.png") no-repeat left;
+	background-size: 30px;
+	background-position: 20px 15px;
 }
 
 /* entire grid container */
