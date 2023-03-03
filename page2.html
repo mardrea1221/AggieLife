@@ -15,7 +15,28 @@
   <body>
     <div id="header"></div>
     <main>
-			<div id="nav"></div>
+			<nav>
+        <!-- Filter -->
+        <div class="dropdown">
+          <button id="filter-btn"><span id="filt">Filter</span></button>
+          <div id="filter-dropdown">
+              <a href="#" data-category="Category 1">Category 1</a>
+              <a href="#" data-category="Category 2">Category 2</a>
+              <a href="#" data-category="Category 3">Category 3</a>
+          </div>
+        </div>
+
+            <!-- Search Textfield -->
+        <form>
+          <input id ="place" type="text" placeholder="Search for exciting opportunities..." id="search-input">
+        </form>
+
+        <!-- Search Button -->
+        <button type="button" id="search-btn">Settings</button>
+        <!-- <img src="assets/mag_glass.png" alt="search" width="10" height="10"> -->
+
+
+      </nav>
 
       <div class="tile-container">
         <div class="tile" data-categories="Category 3,Category 1">Club 1
