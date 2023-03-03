@@ -13,6 +13,16 @@ header {
 	flex-direction: column;
 }
 
+/* Sign In w/ Logo*/
+#signin{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+}
+#signlogo{
+	padding-right: 5px;
+}
+
 h1 {
 	margin: 0;
 }
@@ -61,9 +71,17 @@ nav {
 	height: ; 
 }
 */
+input::placeholder{
+	text-indent: 50px; 
+	font-size: 16px;
 
+}
 /* text input */
 input[type="text"] {
+	background: url("assets/mag_glass.png") no-repeat left;
+	background-position: 20px 20px;
+	background-size: 20px;
+	background-color: white;
 	height: 60px;
 	width: 500px; 
 	border-radius: 1000px; 
@@ -73,7 +91,14 @@ input[type="text"] {
 }
 input:focus{
 	outline-color: none;
-	box-shadow: none;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+	text-indent: 50px;
+	font-size: 16px;
+	outline: none;
+}
+input:focus::placeholder{
+	color: transparent;
+	
 }
 #search-btn{
 	width: 120px;
