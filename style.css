@@ -1,4 +1,5 @@
 body {
+	
 	background-color: #f0f4f4;
 	font-family: sans-serif;
 	margin: 0;
@@ -122,6 +123,13 @@ button[type="search"] {
 	color: white;
 } 
 
+/* regular <a> styling */
+a {
+	text-decoration: none;
+	background-color: transparent;
+	/* box-shadow: 0 0 10px #000; */
+}
+
 /* dropdown <a> styling */
 .dropdown a {
 	color: black;
@@ -175,12 +183,12 @@ button[type="search"] {
 /* entire grid container */
 .tile-container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 250px);
+	grid-template-columns: repeat(3, 400px);
+	grid-template-rows: repeat(3, 320px);
 	grid-gap: 20px;
 
 	/* add left-right padding */
-	padding: 0px 20px;
+	justify-content: center;
 }
 
 /* each cell in the grid */
@@ -188,26 +196,49 @@ button[type="search"] {
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: white;
 	border-radius: 15px;
-	padding: 20px;
+	padding: 15px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	position: relative;
 }
 
 #wrapper {
-    overflow: hidden; /* add this to contain floated children */
+	/* add this to contain floated children */
+	margin-top: 18px;
+    overflow: hidden; 
 }
 #side-1 {
     width: 100px;
     float:left; /* add this */
+	margin-top: 7px;
 }
 #side-2 {
     float: left; /* add this */
+	margin-top: 7px;
 }
 
 .club-name {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
-	font-size: 25px;
+	font-size: 28px;
+	margin-left: 30px;
+	margin-top: 5px;
 	font-weight: bold;
+	/* overflow-wrap: break-word; */
+}
+
+#socials{
+	margin-top: 5px;
+	margin-left: 30px;
+}
+
+.socialmedialogo{
+	margin-top: 6px;
+}
+
+.description{
+	font-family: system-ui, -apple-system, BlinkMacSystemFont;
+	margin-top: 0px;
+	font-size: 15.5px;
+	margin-left: 0px;
 }
 
 .tile-buttons {
@@ -268,3 +299,34 @@ button[type="search"] {
 	background-color: #EFF2F5;
 	color: black;
 }
+
+.tile-leftcorner {
+	position: absolute;
+	border-radius: 16px 0px 12px 0px;
+	top: 0px;
+	left: 0px;
+	height: 30px;
+	width: 100px;
+	background-color: #D22E19;
+	
+}
+
+.text-category{
+	font-family: system-ui, -apple-system, BlinkMacSystemFont;
+	font-size: 15px;
+	color:white;
+	position: absolute;
+	text-align: center;
+	top: 4px;
+	width: 100px;
+}
+
+/* div that encapsulates the 'learn more' and 'join us' buttons */
+
+.tile-buttons{
+	width: 368px;
+	display: flex;
+    justify-content: space-evenly;
+}
+
+
