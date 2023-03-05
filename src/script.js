@@ -1,7 +1,8 @@
-const searchButton = document.getElementById('search-btn');
-searchButton.addEventListener('click', () => {
-  const input = document.querySelector('#search-input');
-  const lower_input = input.value.toLowerCase();
+// const searchButton = document.getElementById('place');
+const inputField = document.getElementById('search-input');
+inputField.addEventListener('input', () => {
+  
+  const lower_input = inputField.value.toLowerCase();
   const tiles = document.querySelectorAll('.tile');
 
   // console.log(tiles);
@@ -41,10 +42,12 @@ filterDropdown.addEventListener('click', (e) => {
     const tiles = document.querySelectorAll('.tile');
 
     tiles.forEach(tile => {
-      // console.log(typeof tile.dataset.categories);
-      const categories = typeof tile.dataset.categories === 'string' 
-                         ? tile.dataset.categories.spilt(',') 
-                         : "";
+      console.log(typeof tile.dataset.categories);
+      // const categories = typeof tile.dataset.categories === 'string' 
+      //                    ? tile.dataset.categories.spilt(',') 
+      //                    : "";
+      const checkCategories = tile.dataset.categories;
+      const categories = checkCategories && checkCategories.split(',') || [];
       if (categories.includes(category)) {
         tile.style.display = 'block';
       } else {
