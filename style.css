@@ -307,8 +307,12 @@ a {
 	left: 0px;
 	height: 30px;
 	width: 100px;
-	background-color: #D22E19;
 	
+	
+}
+
+#color-category1{
+	background-color: #D22E19;
 }
 
 .text-category{
