@@ -11,21 +11,23 @@ inputField.addEventListener('input', () => {
     // console.log(name);
     const description = tile.querySelector('.description').textContent.toLowerCase();
     if (name.includes(lower_input) || description.includes(lower_input)) {
-      tile.style.opacity = 1;
-      tile.querySelectorAll('button').forEach(button => {
-        button.disabled = false;
-      });
+      // tile.style.opacity = 1;
+      // tile.querySelectorAll('button').forEach(button => {
+      //   button.disabled = false;
+      // });
+      tile.style.display = 'block';
     } else {
-      tile.style.opacity = 0.5;
-      tile.querySelectorAll('button').forEach(button => {
-        button.disabled = true;
-      });
-      const socials = document.querySelectorAll('.socialmedialogo');
-        socials.forEach(social => {
-          social.addEventListener('click', (event) => {
-          event.preventDefault();
-        }); 
-      });
+      // tile.style.opacity = 0.5;
+      // tile.querySelectorAll('button').forEach(button => {
+      //   button.disabled = true;
+      // });
+      // const socials = document.querySelectorAll('.socialmedialogo');
+      //   socials.forEach(social => {
+      //     social.addEventListener('click', (event) => {
+      //     event.preventDefault();
+      //   }); 
+      // });
+      tile.style.display = 'none';
     }
   });
 });
@@ -61,20 +63,23 @@ filterDropdown.addEventListener('click', (e) => {
       const checkCategories = tile.dataset.categories;
       const categories = checkCategories && checkCategories.split(',') || [];
       if (categories.includes(category)) {
-        tile.style.opacity = 1;
-        tile.querySelectorAll('button').forEach(button => {
-          button.disabled = false;
-        });
+        // tile.style.opacity = 1;
+        // tile.querySelectorAll('button').forEach(button => {
+        //   button.disabled = false;
+        // });
+        tile.style.display = 'block';
       } else {
-        tile.style.opacity = 0.5;
-        tile.querySelectorAll('button').forEach(button => {
-          button.disabled = true;
-        });
-        const socials = document.querySelectorAll('.socialmedialogo');
-        socials.forEach(social => {
-                social.addEventListener('click', (event) => {
-                  event.preventDefault();
-                }); });
+        // tile.style.opacity = 0.5;
+        // tile.querySelectorAll('button').forEach(button => {
+        //   button.disabled = true;
+        // });
+        // const socials = document.querySelectorAll('.socialmedialogo');
+        // socials.forEach(social => {
+        //   social.addEventListener('click', (event) => {
+        //  event.preventDefault();
+        //  }); 
+        // });
+        tile.style.display = 'none';
       }
     });
   }
