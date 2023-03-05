@@ -11,9 +11,21 @@ inputField.addEventListener('input', () => {
     // console.log(name);
     const description = tile.querySelector('.description').textContent.toLowerCase();
     if (name.includes(lower_input) || description.includes(lower_input)) {
-      tile.style.display = 'block';
+      tile.style.opacity = 1;
+      tile.querySelectorAll('button').forEach(button => {
+        button.disabled = false;
+      });
     } else {
-      tile.style.display = 'none';
+      tile.style.opacity = 0.5;
+      tile.querySelectorAll('button').forEach(button => {
+        button.disabled = true;
+      });
+      const socials = document.querySelectorAll('.socialmedialogo');
+        socials.forEach(social => {
+          social.addEventListener('click', (event) => {
+          event.preventDefault();
+        }); 
+      });
     }
   });
 });
@@ -49,9 +61,20 @@ filterDropdown.addEventListener('click', (e) => {
       const checkCategories = tile.dataset.categories;
       const categories = checkCategories && checkCategories.split(',') || [];
       if (categories.includes(category)) {
-        tile.style.display = 'block';
+        tile.style.opacity = 1;
+        tile.querySelectorAll('button').forEach(button => {
+          button.disabled = false;
+        });
       } else {
-        tile.style.display = 'none';
+        tile.style.opacity = 0.5;
+        tile.querySelectorAll('button').forEach(button => {
+          button.disabled = true;
+        });
+        const socials = document.querySelectorAll('.socialmedialogo');
+        socials.forEach(social => {
+                social.addEventListener('click', (event) => {
+                  event.preventDefault();
+                }); });
       }
     });
   }
