@@ -190,6 +190,52 @@ button[type="search"] {
 	border-radius: 15px;
 	padding: 20px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	position: relative;
+}
+
+#wrapper {
+    overflow: hidden; /* add this to contain floated children */
+}
+#side-1 {
+    width: 100px;
+    float:left; /* add this */
+}
+#side-2 {
+    float: left; /* add this */
+}
+
+.club-name {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.tile-buttons {
+	position: absolute;
+	bottom: 10px;
+}
+
+#learn-btn{
+	width: 140px;
+	height: 35px;
+	border: none;
+	border-radius: 1000px;
+	background-color: #F6C749;
+	color: black;
+	font-size: 20px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+#join-btn{
+	width: 140px;
+	height: 35px;
+	border: none;
+	border-radius: 1000px;
+	background-color: #F6C749;
+	color: black;
+	font-size: 20px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont;
 }
 
 /* pagination div */
