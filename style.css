@@ -74,13 +74,10 @@ nav {
 	margin-left: 20%;
 }
 
-/* form {
-	/* width: fit-content;  */
-  	/* box-sizing: border-box; */
-  	/* width: 500px;
-	height: ; 
+.allSearch{
+	position: relative;
 }
-*/
+
 input::placeholder{
 	position:absolute;
 	text-indent: 50px; 
@@ -101,6 +98,8 @@ input[type="text"] {
 	border-color: white;
 	border: none;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	text-indent: 50px;
+	font-size: 16px;
 }
 input:focus{
 	outline-color: none;
@@ -112,6 +111,17 @@ input:focus{
 input:focus::placeholder{
 	color: transparent;
 	
+}
+#mic{
+	position: absolute;
+	top: 10px;
+	left: 450px;
+	width: 30px;
+	height: 30px;
+	border: none;
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
 }
 #accessibility-btn{
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;

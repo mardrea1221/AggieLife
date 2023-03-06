@@ -85,3 +85,18 @@ filterDropdown.addEventListener('click', (e) => {
   }
 });
 
+
+const microphone = document.getElementById('mic');
+
+microphone.addEventListener('click', function() {
+  var recog = new webkitSpeechRecognition();
+  recog.lang = "en-GB";
+
+  recog.onresult = function(event){
+    console.log(event);
+    document.getElementById('search-input').value = event.results[0][0].transcript;
+  }
+
+  recog.start();
+
+});
