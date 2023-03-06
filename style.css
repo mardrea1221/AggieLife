@@ -173,13 +173,14 @@ a {
 
 /* styling the categories inside dropdown */
 .dropdown #filter-dropdown {
-	background-color: #f4f4f4;
+	background-color: white;
 	display: none;
 	position: absolute;
 	z-index: 1;
 	overflow-y: auto;
-	
+	border-radius: 20px;
 }
+
 /* dropdown button */
 .dropdown #filter-btn {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
