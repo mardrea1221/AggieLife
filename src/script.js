@@ -7,7 +7,7 @@ inputField.addEventListener('input', () => {
 
   // console.log(tiles);
   tiles.forEach(tile => {
-    const name = tile.textContent.toLowerCase();
+    const name = tile.querySelector('.club-name').textContent.toLowerCase();
     // console.log(name);
     const description = tile.querySelector('.description').textContent.toLowerCase();
     if (name.includes(lower_input) || description.includes(lower_input)) {
