@@ -109,11 +109,14 @@ input:focus::placeholder{
 	color: transparent;
 	
 }
-#search-btn{
-	width: 120px;
+#accessibility-btn{
+	width: 190px;
 	height: 60px;
 	border: none;
 	border-radius: 1000px;
+	background: url("assets/accessibility\ icon.png") no-repeat left;
+	background-size: 30px;
+	background-position: 20px 15px;
 	background-color: #133162;
 	color: white;
 	font-size: 20px;
