@@ -69,6 +69,8 @@ nav {
 	padding: 40px; 
 	flex-direction: row;
 	justify-content: space-evenly;
+	margin-right: 20%;
+	margin-left: 20%;
 }
 
 /* form {
@@ -175,6 +177,7 @@ a {
 	padding-left: 30px;
 }
 #filter-btn{
+	/* margin-right: 20px; */
 	background: url("assets/flter_icon.png") no-repeat left;
 	background-size: 30px;
 	background-position: 20px 15px;
