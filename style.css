@@ -1,7 +1,7 @@
 body {
 	
 	background-color: #f0f4f4;
-	font-family: sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont;
 	margin: 0;
 	padding: 0;
 }
@@ -9,7 +9,7 @@ body {
 header {
 	background-color: #133162;
 	color: white;
-	padding: 5px 20px;
+	padding: 5px 15px 10px 15px;
 	display: flex;
 	flex-direction: column;
 }
@@ -46,17 +46,18 @@ h1 {
 /* options next to AggieLife */
 .option{
 	color:white;
-	font-weight: 350;
+	font-weight: 400;
 	text-decoration: none;	
 	padding: 14px 20px;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont
+	font-family: system-ui, -apple-system, BlinkMacSystemFont;
 }
 
+/* yellow highlight on group */
 #option-group{
 	color:black;
 	background-color: #F6C749;
-	font-weight: 600;
-
+	font-weight: 700;
+	padding: 9px 18px 11px 18px;
 	/* max border radius */
 	border-radius: 1000px;
 	
@@ -166,9 +167,11 @@ a {
 }
 /* dropdown button */
 .dropdown #filter-btn {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont;
+	font-size: 18px;
+	font-weight: bold;
 	background-color: #133162;
 	color: white;
-	font-size: 20px;
 	border: none;
 	cursor: pointer;
 	border-radius: 1000px;
@@ -199,7 +202,7 @@ a {
 
 /* each cell in the grid */
 .tile {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont;
 	background-color: white;
 	border-radius: 15px;
 	padding: 15px;
@@ -243,7 +246,7 @@ a {
 .description{
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
 	margin-top: 0px;
-	font-size: 15.5px;
+	font-size: 15px;
 	margin-left: 0px;
 }
 
@@ -259,9 +262,10 @@ a {
 	border-radius: 1000px;
 	background-color: #F6C749;
 	color: black;
-	font-size: 20px;
+	font-size: 15px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
+	font-weight: bold;
 }
 #join-btn{
 	width: 140px;
@@ -270,9 +274,10 @@ a {
 	border-radius: 1000px;
 	background-color: #F6C749;
 	color: black;
-	font-size: 20px;
+	font-size: 15px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
+	font-weight: bold;
 }
 
 /* pagination div */
@@ -323,11 +328,11 @@ a {
 
 .text-category{
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
-	font-size: 15px;
+	font-size: 14px;
 	color:white;
 	position: absolute;
 	text-align: center;
-	top: 4px;
+	top: 5px;
 	width: 100px;
 }
 
