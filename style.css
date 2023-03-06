@@ -193,7 +193,7 @@ a {
 .tile-container {
 	display: grid;
 	grid-template-columns: repeat(3, 400px);
-	grid-template-rows: repeat(3, 320px);
+	grid-template-rows: repeat(3, 330px);
 	grid-gap: 20px;
 
 	/* add left-right padding */
@@ -228,7 +228,7 @@ a {
 .club-name {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
 	font-size: 28px;
-	margin-left: 30px;
+	margin-left: 25px;
 	margin-top: 5px;
 	font-weight: bold;
 	/* overflow-wrap: break-word; */
@@ -236,7 +236,7 @@ a {
 
 #socials{
 	margin-top: 5px;
-	margin-left: 30px;
+	margin-left: 25px;
 }
 
 .socialmedialogo{
@@ -247,12 +247,13 @@ a {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
 	margin-top: 0px;
 	font-size: 15px;
-	margin-left: 0px;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 .tile-buttons {
 	position: absolute;
-	bottom: 10px;
+	bottom: 25px;
 }
 
 #learn-btn{
@@ -313,13 +314,11 @@ a {
 
 .tile-leftcorner {
 	position: absolute;
-	border-radius: 16px 0px 12px 0px;
+	border-radius: 14px 0px 14px 0px;
 	top: 0px;
 	left: 0px;
-	height: 30px;
+	height: 28px;
 	width: 100px;
-	
-	
 }
 
 #color-category1{
@@ -332,7 +331,7 @@ a {
 	color:white;
 	position: absolute;
 	text-align: center;
-	top: 5px;
+	top: 3px;
 	width: 100px;
 }
 
