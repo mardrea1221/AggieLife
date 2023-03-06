@@ -32,6 +32,23 @@ inputField.addEventListener('input', () => {
   });
 });
 
+// Copy of InputField Listener - For Using the Microphone
+function input_copy(input){
+  const lower_input = input.toLowerCase();
+  const tiles = document.querySelectorAll('.tile');
+
+  tiles.forEach(tile => {
+    const name = tile.querySelector('.club-name').textContent.toLowerCase();
+    const description = tile.querySelector('.description').textContent.toLowerCase();
+    if (name.includes(lower_input) || description.includes(lower_input)) {
+      tile.style.display = 'block';
+    } else {
+      tile.style.display = 'none';
+    }
+  });
+
+}
+
 
 
 
@@ -92,9 +109,11 @@ microphone.addEventListener('click', function() {
   var recog = new webkitSpeechRecognition();
   recog.lang = "en-GB";
 
-  recog.onresult = function(event){
-    console.log(event);
-    document.getElementById('search-input').value = event.results[0][0].transcript;
+  recog.onresult = function(e){
+    console.log(e);
+    document.getElementById('search-input').value = e.results[0][0].transcript;
+    const cur_input = document.getElementById('search-input').value;
+    input_copy(cur_input);
   }
 
   recog.start();
