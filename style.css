@@ -185,7 +185,7 @@ a {
 .dropdown #filter-btn {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: bold;
 	background-color: #133162;
 	color: white;
 	border: none;
@@ -347,7 +347,7 @@ a {
 	color:white;
 	position: absolute;
 	text-align: center;
-	top: 3px;
+	top: 5px;
 	width: 100px;
 }
 
