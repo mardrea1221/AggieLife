@@ -301,7 +301,8 @@ a {
 .pagination {
 	display: flex;
 	justify-content: center;
-	margin-top: 20px;
+	margin-top: 72px;
+	margin-bottom: 72px;
 }
 
 /* pagination text */
@@ -316,7 +317,7 @@ a {
 .pagination a.active {
 	background-color: #133162;
 	color: white;
-	border-radius: 50%;
+	border-radius: 100%;
 	padding-left: 12px;
 	padding-right: 12px;
 
@@ -339,6 +340,30 @@ a {
 
 #color-category1{
 	background-color: #D22E19;
+}
+
+#color-category2{
+	background-color: #ED9110;
+}
+
+#color-category3{
+	background-color: #F1C521;
+}
+
+#color-category4{
+	background-color: #009C06;
+}
+
+#color-category5{
+	background-color: #1E6CD5;
+}
+
+#color-category6{
+	background-color: #CB3FAC;
+}
+
+#color-category7{
+	background-color: #5C239E;
 }
 
 .text-category{
