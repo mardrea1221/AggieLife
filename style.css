@@ -126,7 +126,7 @@ input:focus::placeholder{
 #accessibility-btn{
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
 	width: 180px;
-	height: 53px;
+	height: 52px;
 	border: none;
 	border-radius: 1000px;
 	background: url("assets/accessibility\ icon.png") no-repeat left;
@@ -148,6 +148,7 @@ button[type="search"] {
 a {
 	text-decoration: none;
 	background-color: transparent;
+	/* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 	/* box-shadow: 0 0 10px #000; */
 }
 
@@ -155,7 +156,12 @@ a {
 .dropdown a {
 	color: black;
 	display: block;
+	width: 80px;
 	padding: 10px;
+	font-size: 14px;
+	margin-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	text-decoration: none;
 }
 
@@ -192,7 +198,7 @@ a {
 	cursor: pointer;
 	border-radius: 1000px;
 	width: 120px;
-	height: 53px;
+	height: 52px;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #filt{
@@ -210,7 +216,7 @@ a {
 .tile-container {
 	display: grid;
 	grid-template-columns: repeat(3, 400px);
-	grid-template-rows: repeat(3, 330px);
+	grid-template-rows: repeat(3, 320px);
 	grid-gap: 20px;
 
 	/* add left-right padding */
