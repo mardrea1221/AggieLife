@@ -50,8 +50,7 @@ function input_copy(input){
 }
 
 
-
-
+/* Filter Functionality */
 const filterBtn = document.getElementById('filter-btn');
 
 const filterDropdown = document.getElementById('filter-dropdown');
@@ -65,42 +64,81 @@ filterBtn.addEventListener('click', function() {
   }
 });
 
-filterDropdown.addEventListener('click', (e) => {
-  const filter = e.target;
-  if (filter.tagName === 'A') {
+const checked_boxes = document.querySelectorAll('input[type="checkbox"]');
+var selected = [];
+for (var i = 0; i < checked_boxes.length; i++) {
+  checked_boxes[i].addEventListener("click", displayCheck);
+}
 
-    const category = filter.dataset.category;
+function displayCheck(e) {
+  const filter = e.target;
+  e.stopPropagation();
+  if (e.target.checked) {
+    selected.push(e.target.dataset.category);
+    console.log(selected);
+  } 
+  else {
+    selected.pop(e.target.dataset.category);
+    console.log(selected);
+  }
+
+  for (var s in selected){
+    // if (filter.tagName === 'A') {
     const tiles = document.querySelectorAll('.tile');
 
     tiles.forEach(tile => {
       console.log(typeof tile.dataset.categories);
-      // const categories = typeof tile.dataset.categories === 'string' 
-      //                    ? tile.dataset.categories.spilt(',') 
-      //                    : "";
       const checkCategories = tile.dataset.categories;
       const categories = checkCategories && checkCategories.split(',') || [];
-      if (categories.includes(category)) {
-        // tile.style.opacity = 1;
-        // tile.querySelectorAll('button').forEach(button => {
-        //   button.disabled = false;
-        // });
+      if (categories.includes(selected[s])) {
         tile.style.display = 'block';
       } else {
-        // tile.style.opacity = 0.5;
-        // tile.querySelectorAll('button').forEach(button => {
-        //   button.disabled = true;
-        // });
-        // const socials = document.querySelectorAll('.socialmedialogo');
-        // socials.forEach(social => {
-        //   social.addEventListener('click', (event) => {
-        //  event.preventDefault();
-        //  }); 
-        // });
         tile.style.display = 'none';
       }
     });
+    // }
   }
-});
+}
+
+
+
+
+// filterDropdown.addEventListener('click', (e) => {
+//   const filter = e.target;
+//   if (filter.tagName === 'A') {
+
+//     const category = filter.dataset.category;
+//     const tiles = document.querySelectorAll('.tile');
+
+//     tiles.forEach(tile => {
+//       console.log(typeof tile.dataset.categories);
+//       // const categories = typeof tile.dataset.categories === 'string' 
+//       //                    ? tile.dataset.categories.spilt(',') 
+//       //                    : "";
+//       const checkCategories = tile.dataset.categories;
+//       const categories = checkCategories && checkCategories.split(',') || [];
+//       if (categories.includes(category)) {
+//         // tile.style.opacity = 1;
+//         // tile.querySelectorAll('button').forEach(button => {
+//         //   button.disabled = false;
+//         // });
+//         tile.style.display = 'block';
+//       } else {
+//         // tile.style.opacity = 0.5;
+//         // tile.querySelectorAll('button').forEach(button => {
+//         //   button.disabled = true;
+//         // });
+//         // const socials = document.querySelectorAll('.socialmedialogo');
+//         // socials.forEach(social => {
+//         //   social.addEventListener('click', (event) => {
+//         //  event.preventDefault();
+//         //  }); 
+//         // });
+//         tile.style.display = 'none';
+//       }
+//     });
+//   }
+// });
 
 
 const microphone = document.getElementById('mic');
