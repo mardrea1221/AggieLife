@@ -119,3 +119,30 @@ microphone.addEventListener('click', function() {
   recog.start();
 
 });
+
+
+function activateDropdown() {
+  var x = document.getElementById("dark-box");
+  event.stopPropagation()
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  document.getElementById("filter-btn").zIndex = 100;
+}
+
+function removeDarkOverlay() {
+  var x = document.getElementById("dark-box");
+  
+  if (x.style.display === "block") {
+    x.style.display = "none";
+    document.getElementById("filter-btn").zIndex = 1;
+    document.getElementById("filter-dropdown").style.display = "none";
+  }
+  
+}
+
+document.querySelector('#filter-btn').addEventListener('click', activateDropdown);
+
+document.body.addEventListener('click', removeDarkOverlay);
