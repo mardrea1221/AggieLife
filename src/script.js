@@ -69,9 +69,7 @@ var selected = [];
 for (var i = 0; i < checked_boxes.length; i++) {
   checked_boxes[i].addEventListener("click", displayCheck);
 }
-
 function displayCheck(e) {
-  const filter = e.target;
   e.stopPropagation();
   if (e.target.checked) {
     selected.push(e.target.dataset.category);
@@ -82,26 +80,31 @@ function displayCheck(e) {
     console.log(selected);
   }
 
-  for (var s in selected){
-    // if (filter.tagName === 'A') {
-    const tiles = document.querySelectorAll('.tile');
-
-    tiles.forEach(tile => {
-      console.log(typeof tile.dataset.categories);
-      const checkCategories = tile.dataset.categories;
-      const categories = checkCategories && checkCategories.split(',') || [];
-      if (categories.includes(selected[s])) {
-        tile.style.display = 'block';
-      } else {
-        tile.style.display = 'none';
+  const tiles = document.querySelectorAll('.tile');
+    for (var i = 0; i < tiles.length; i++) {
+      if (selected.includes(tiles[i].dataset.categories)){
+        tiles[i].style.display = 'block';
       }
-    });
-    // }
+      else{
+        tiles[i].style.display = 'none';
+      }
   }
+ 
+    // if (filter.tagName === 'A') {
+    
+    // tiles.forEach(tile => {
+    //   console.log(typeof tile.dataset.categories);
+    //   const checkCategories = tile.dataset.categories;
+    //   const categories = checkCategories && checkCategories.split(',') || [];
+    //   if (categories.includes(selected[s])) {
+    //     
+    //   } else {
+    //     
+    //   }
+    // });
+    // }
+  
 }
-
-
-
 
 // filterDropdown.addEventListener('click', (e) => {
 //   const filter = e.target;
