@@ -79,16 +79,24 @@ function displayCheck(e) {
     selected.pop(e.target.dataset.category);
     console.log(selected);
   }
-
   const tiles = document.querySelectorAll('.tile');
+  if (selected.length >= 1){
+      for (var i = 0; i < tiles.length; i++) {
+        if (selected.includes(tiles[i].dataset.categories)){
+          tiles[i].style.display = 'block';
+        }
+        else{
+          tiles[i].style.display = 'none';
+        }
+    }
+  }
+  else{
     for (var i = 0; i < tiles.length; i++) {
-      if (selected.includes(tiles[i].dataset.categories)){
         tiles[i].style.display = 'block';
       }
-      else{
-        tiles[i].style.display = 'none';
-      }
-  }
+    }
+}
+    
  
     // if (filter.tagName === 'A') {
     
@@ -104,7 +112,7 @@ function displayCheck(e) {
     // });
     // }
   
-}
+
 
 // filterDropdown.addEventListener('click', (e) => {
 //   const filter = e.target;
