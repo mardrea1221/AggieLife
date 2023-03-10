@@ -63,7 +63,7 @@ h1 {
 }
 
 
-
+/* Navigation */
 nav {
 	display: flex;
 	padding: 80px 20px 80px 20px; 
@@ -122,22 +122,7 @@ input:focus::placeholder{
 	outline: none;
 	cursor: pointer;
 }
-#accessibility-btn{
-	font-family: system-ui, -apple-system, BlinkMacSystemFont;
-	width: 180px;
-	height: 52px;
-	border: none;
-	border-radius: 1000px;
-	background: url("assets/accessibility\ icon.png") no-repeat left;
-	background-size: 28px;
-	background-position: 20px 13px;
-	background-color: #133162;
-	color: white;
-	font-size: 18px;
-	font-weight: 500;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	
-}
+
 /* search button */
 button[type="search"] {
 	color: white;
@@ -189,7 +174,7 @@ a {
 	border-radius: 00px 0px 30px 30px;
 }
 
-/* dropdown button */
+/* dropdown filter button */
 .dropdown #filter-btn {
 	position:relative;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
@@ -215,6 +200,39 @@ a {
 	background-position: 20px 12px;
 	z-index: 1000;
 }
+
+/* Accessibility Button */
+#accessibility-btn{
+	font-family: system-ui, -apple-system, BlinkMacSystemFont;
+	width: 180px;
+	height: 52px;
+	border: none;
+	border-radius: 1000px;
+	background: url("assets/accessibility\ icon.png") no-repeat left;
+	background-size: 28px;
+	background-position: 20px 13px;
+	background-color: #133162;
+	color: white;
+	font-size: 18px;
+	font-weight: 500;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	
+}
+
+/* Accessibility Dropdown */
+.dropdown #access-dropdown {
+	background-color: white;
+	display: none;
+	position: absolute;
+	z-index: 1;
+	overflow-y: auto;
+	border-radius: 00px 0px 30px 30px;
+	width: 180px;
+	height: 50px;
+}
+
+
+
 
 /* entire grid container */
 .tile-container {

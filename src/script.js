@@ -1,3 +1,4 @@
+/* Search Functionality */
 // const searchButton = document.getElementById('place');
 const inputField = document.getElementById('search-input');
 inputField.addEventListener('input', () => {
@@ -96,22 +97,19 @@ function displayCheck(e) {
       }
     }
 }
-    
- 
-    // if (filter.tagName === 'A') {
-    
-    // tiles.forEach(tile => {
-    //   console.log(typeof tile.dataset.categories);
-    //   const checkCategories = tile.dataset.categories;
-    //   const categories = checkCategories && checkCategories.split(',') || [];
-    //   if (categories.includes(selected[s])) {
-    //     
-    //   } else {
-    //     
-    //   }
-    // });
-    // }
   
+
+/* Accessibility Functionality */
+const accessBtn = document.getElementById('accessibility-btn');
+const accessDropdown = document.getElementById('access-dropdown');
+accessBtn.addEventListener('click', function() {
+  if (accessDropdown.style.display === 'block') {
+    accessDropdown.style.display = 'none';
+    
+  } else {
+    accessDropdown.style.display = 'block';
+  }
+});
 
 
 // filterDropdown.addEventListener('click', (e) => {

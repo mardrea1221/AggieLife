@@ -53,13 +53,6 @@
               <input type ="checkbox" data-category="Category 7">
               <label class="categories">Volunteering</label>
             </div>
-              <!-- <a href="#" data-category="Category 1">Academic</a>
-              <a href="#" data-category="Category 2">Art</a>
-              <a href="#" data-category="Category 3">Athletic</a>
-              <a href="#" data-category="Category 4">Cultural</a>
-              <a href="#" data-category="Category 5">Recreational</a>
-              <a href="#" data-category="Category 6">Religious</a>
-              <a href="#" data-category="Category 7">Volunteering</a> -->
           </div>
         </div>
 
@@ -72,8 +65,19 @@
         </form>
 
         <!-- Search Button -->
-        <button type="button" id="accessibility-btn"><span id="filt">Accessibility</span></button>
-        <!-- <img src="assets/mag_glass.png" alt="search" width="10" height="10"> -->
+        <div class="dropdown">
+          <button type="button" id="accessibility-btn"><span id="filt">Accessibility</span></button>
+          <div id="access-dropdown">
+            <div class ="access-checkbox">
+              <input type ="checkbox">
+              <label class="categories" >Bold Text</label>
+            </div>
+            <div class ="access-checkbox">
+              <input type ="checkbox">
+              <label class="categories">High Contrast</label>
+            </div>
+          </div>
+        </div>
 
 
       </nav>
