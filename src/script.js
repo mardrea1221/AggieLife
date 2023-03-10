@@ -39,8 +39,10 @@ const filterBtn = document.getElementById('filter-btn');
 const filterDropdown = document.getElementById('filter-dropdown');
 
 filterBtn.addEventListener('click', function() {
+  filterBtn.style.borderRadius = "30px 30px 0px 0px";
   if (filterDropdown.style.display === 'block') {
     filterDropdown.style.display = 'none';
+    filterBtn.style.borderRadius = "30px 30px 30px 30px";
     
   } else {
     filterDropdown.style.display = 'block';
@@ -128,11 +130,14 @@ microphone.addEventListener('click', function() {
 const accessBtn = document.getElementById('accessibility-btn');
 const accessDropdown = document.getElementById('access-dropdown');
 accessBtn.addEventListener('click', function() {
+  accessBtn.style.borderRadius = "30px 30px 0px 0px";
   if (accessDropdown.style.display === 'block') {
     accessDropdown.style.display = 'none';
+    accessBtn.style.borderRadius = "30px 30px 30px 30px";
     
   } else {
     accessDropdown.style.display = 'block';
+    accessDropdown.style.borderRadius = "0px 0px 30px 30px";
   }
 });
 
