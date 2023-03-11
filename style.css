@@ -31,7 +31,6 @@ a span {
 	padding-left: 30px;
 }
 
-​
 h1 {
 	margin: 0;
 }
@@ -297,6 +296,18 @@ a {
 	/* border: 3px solid white; Inner border */
 	border-radius: 2px;
 	cursor: pointer;
+}
+
+.high-contrast {
+  filter: grayscale(100%);
+}
+
+button.high-contrast {
+  filter: grayscale(100%);
+}
+
+.bold-text {
+  font-weight: bold;
 }
 
 .access-checkbox > input:checked {

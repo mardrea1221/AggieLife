@@ -136,7 +136,7 @@ accessBtn.addEventListener('click', function() {
   if (accessDropdown.style.display === 'block') {
     accessDropdown.style.display = 'none';
     accessBtn.style.borderRadius = "30px 30px 30px 30px";
-    for (let i = 0; i < collection.length; i++) {
+    for (let i = 0; i < accessText.length; i++) {
       accessText[i].style.fontWeight = "bold";
     }
   } else {
@@ -145,7 +145,54 @@ accessBtn.addEventListener('click', function() {
   }
 });
 
+/* Bold Feature */
+const accessBold = document.getElementById('access-bold');
+accessBold.addEventListener('change', function() {
+  if (this.checked) {
+    console.log('entered1');
+    for (let i = 0; i < accessText.length; i++) {
+      accessText[i].classList.add('bold-text');
+    }
+  } else {
+    console.log('entered2');
+    for (let i = 0; i < accessText.length; i++) {
+      accessText[i].classList.remove('bold-text');
+    }
+  }
+});
 
+/* Color Blind Feature */
+const accessColor = document.getElementById('access-color');
+accessColor.addEventListener('change', function() {
+  if (this.checked) {
+    colorBlindFunc(true)
+  } else {
+    colorBlindFunc(false)
+  }
+});
 
-
-
+function colorBlindFunc(value) {
+  const tileCorner = document.querySelectorAll('.tile-leftcorner');
+  const learnBtn = document.querySelectorAll('.tile-buttons');
+  const accBtn = document.getElementById('accessibility-btn');
+  const filterBtn = document.getElementById('filter-btn');
+  if (value) { 
+    tileCorner.forEach(tc => {
+      tc.classList.add('high-contrast')
+    });
+    learnBtn.forEach(lb => {
+      lb.classList.add('high-contrast')
+    });
+    filterBtn.classList.add('high-contrast');
+    accBtn.classList.add('high-contrast');
+  } else {
+    tileCorner.forEach(tc => {
+      tc.classList.remove('high-contrast')
+    });
+    learnBtn.forEach(lb => {
+      lb.classList.remove('high-contrast')
+    });
+    filterBtn.classList.remove('high-contrast');
+    accBtn.classList.remove('high-contrast');
+  }
+}
