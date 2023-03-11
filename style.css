@@ -246,51 +246,34 @@ a {
 	cursor: pointer;
 }
 .access-checkbox input{
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-	height: 0;
-	width: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+
+	width: 15px;
+	height: 15px;
+	
+	box-shadow: 0 0 0 1px black; /* Outer border */
+	/* border: 3px solid white; Inner border */
+	border-radius: 3px;
+}
+
+.access-checkbox > input:checked {
+	background-color: #133162; 
 }
 
 .access-checkbox label {
 	vertical-align: top;
 	font-size: 14px;
 	font-weight: bold;
-	padding-left: 25px;
-}
-
-.access-checkbox > [type="checkbox"] + label:before {
-	content: '';
-	position: absolute;
-	left: 30px;
-	height: 12px;
-	width: 12px;
-	border: 1px solid black;
-	border-radius: 2.5px;
-	font-size: 15px;
-	text-align: center;
-	cursor: pointer;
-}
-
-.access-checkbox > [type="checkbox"]:checked + label:before {
-	background-color: #133162;
-	content: '';
-	position: absolute;
-	left: 30px;
-	height: 12px;
-	width: 12px;
-	border: 1px solid black;
-	border-radius: 2.5px;
-	font-size: 15px;
-	text-align: center;
-	cursor: pointer;
+	padding-left: 5px;
 }
 
 #acc-hr{
 	width: 133px;
 	background-color: #D9D9D9;
-	height: 1.5px; 
+	height: 1px; 
 	border: 0; 
 }
 
