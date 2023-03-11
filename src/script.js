@@ -82,31 +82,58 @@ function displayCheck(e) {
     }
 }
 
-function activateDropdown() {
+
+function activateDarkOverlay_filter() {
   var x = document.getElementById("dark-box");
-  event.stopPropagation()
   if (x.style.display === "none") {
+    document.getElementById("filter-btn").style.zIndex = "3";
+    document.getElementById("filter-dropdown").style.zIndex = "3";
+    document.getElementById("accessibility-btn").style.zIndex = "1";
+    document.getElementById("access-dropdown").style.zIndex = "1";
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
-  document.getElementById("filter-btn").zIndex = 100;
 }
-
+function activateDarkOverlay_accessibility() {
+  var x = document.getElementById("dark-box");
+  
+  if (x.style.display === "none") {
+    document.getElementById("filter-btn").style.zIndex = "1";
+    document.getElementById("filter-dropdown").style.zIndex = "1";
+    document.getElementById("accessibility-btn").style.zIndex = "3";
+    document.getElementById("access-dropdown").style.zIndex = "3";
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 function removeDarkOverlay() {
   var x = document.getElementById("dark-box");
   
   if (x.style.display === "block") {
     x.style.display = "none";
-    document.getElementById("filter-btn").zIndex = 1;
+
+    document.getElementById("accessibility-btn").style.zIndex = "1";
+    document.getElementById("access-dropdown").style.zIndex = "1";
+    document.getElementById("filter-btn").style.zIndex = "1";
+    document.getElementById("filter-dropdown").style.zIndex = "1";
+
     document.getElementById("filter-dropdown").style.display = "none";
-    filterBtn.style.borderRadius = "30px 30px 30px 30px";
+    document.getElementById("access-dropdown").style.display = "none";
+
+    document.getElementById('filter-btn').style.borderRadius = "30px 30px 30px 30px";
+    document.getElementById('accessibility-btn').style.borderRadius = "30px 30px 30px 30px";
   }
-  
 }
 
-document.querySelector('#filter-btn').addEventListener('click', activateDropdown);
-document.body.addEventListener('click', removeDarkOverlay);
+document.querySelector('#filter-btn').addEventListener('click', activateDarkOverlay_filter);
+document.querySelector('#accessibility-btn').addEventListener('click', activateDarkOverlay_accessibility);
+document.querySelector('#dark-box').addEventListener('click', removeDarkOverlay);
+
+// document.body.addEventListener('click', removeDarkOverlay);
+
+
   
 
 /* Microphone Functionality*/ 
