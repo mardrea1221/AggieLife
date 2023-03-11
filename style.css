@@ -276,8 +276,8 @@ a {
 	flex-direction: column;
 	justify-content: left;
 	padding-top: 10px;
-	margin-left: 25px;
-	margin-right: 25px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 /* Accessibility Checkboxes */
@@ -305,9 +305,9 @@ a {
 
 .access-checkbox label {
 	vertical-align: top;
-	font-size: 14px;
+	font-size: 13.5px;
 	font-weight: bold;
-	padding-left: 1px;
+	/* padding-left: 1px; */
 }
 
 #acc-hr{
