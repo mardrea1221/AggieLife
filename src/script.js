@@ -100,6 +100,7 @@ function removeDarkOverlay() {
     x.style.display = "none";
     document.getElementById("filter-btn").zIndex = 1;
     document.getElementById("filter-dropdown").style.display = "none";
+    filterBtn.style.borderRadius = "30px 30px 30px 30px";
   }
   
 }

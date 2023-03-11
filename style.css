@@ -192,16 +192,52 @@ a {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	z-index: 1000; 
 }
-#filt{
-	padding-left: 30px;
-}
 #filter-btn{
-	/* margin-right: 20px; */
 	background: url("assets/flter_icon.png") no-repeat left;
 	background-size: 30px;
 	background-position: 20px 12px;
 	z-index: 1000;
 }
+#filt{
+	padding-left: 30px;
+}
+#filt-style{
+	margin-left: 10px;
+	margin-right: 10px; 
+	padding-top: 10px;
+}
+
+/* Filter Checkboxes */
+.filter-checkbox input{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+
+	width: 12px;
+	height: 12px;
+	
+	box-shadow: 0 0 0 1px black; 
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.filter-checkbox label {
+	vertical-align: top;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.filt-hr{
+	background-color: #D9D9D9;
+	height: 1px; 
+	border: 0; 
+}
+
+.filter-checkbox > input:checked {
+	background-color: #133162; 
+}
+
 
 /* Accessibility Button */
 #accessibility-btn{
@@ -251,12 +287,13 @@ a {
 	-o-appearance: none;
 	appearance: none;
 
-	width: 15px;
-	height: 15px;
+	width: 12px;
+	height: 12px;
 	
 	box-shadow: 0 0 0 1px black; /* Outer border */
 	/* border: 3px solid white; Inner border */
-	border-radius: 3px;
+	border-radius: 2px;
+	cursor: pointer;
 }
 
 .access-checkbox > input:checked {
@@ -267,7 +304,7 @@ a {
 	vertical-align: top;
 	font-size: 14px;
 	font-weight: bold;
-	padding-left: 5px;
+	padding-left: 1px;
 }
 
 #acc-hr{
