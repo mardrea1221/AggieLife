@@ -49,7 +49,7 @@ filterBtn.addEventListener('click', function() {
   }
 });
 
-const checked_boxes = document.querySelectorAll('input[type="checkbox"]');
+const checked_boxes = document.querySelectorAll('input[name="filter-input"]');
 var selected = [];
 for (var i = 0; i < checked_boxes.length; i++) {
   checked_boxes[i].addEventListener("click", displayCheck);
@@ -130,12 +130,15 @@ microphone.addEventListener('click', function() {
 /* Accessibility Functionality */
 const accessBtn = document.getElementById('accessibility-btn');
 const accessDropdown = document.getElementById('access-dropdown');
+const accessText = document.getElementsByClassName("description"); // "categories" "club-name" "text-category"
 accessBtn.addEventListener('click', function() {
   accessBtn.style.borderRadius = "30px 30px 0px 0px";
   if (accessDropdown.style.display === 'block') {
     accessDropdown.style.display = 'none';
     accessBtn.style.borderRadius = "30px 30px 30px 30px";
-    
+    for (let i = 0; i < collection.length; i++) {
+      accessText[i].style.fontWeight = "bold";
+    }
   } else {
     accessDropdown.style.display = 'block';
     accessDropdown.style.borderRadius = "0px 0px 30px 30px";
