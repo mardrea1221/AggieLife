@@ -171,6 +171,8 @@ a {
 	display: none;
 	position: absolute;
 	z-index: 1;
+	height: 280px;
+	/* margin-top: 5px; */
 	overflow-y: auto;
 	border-radius: 00px 0px 30px 30px;
 	width: 120px;
@@ -223,8 +225,9 @@ a {
 }
 
 .filter-checkbox label {
-	vertical-align: top;
-	font-size: 14px;
+	vertical-align: text-top;
+	/* margin-bottom: 14px; */
+	font-size: 11px;
 	font-weight: bold;
 }
 
@@ -265,7 +268,7 @@ a {
 	z-index: 1;
 	overflow-y: auto;
 	width: 180px;
-	height: 90px;
+	height: 85px;
 }
 
 #acc-style{
