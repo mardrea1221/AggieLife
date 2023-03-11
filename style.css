@@ -170,10 +170,10 @@ a {
 	display: none;
 	position: absolute;
 	/* z-index: 1; */
-	height: 280px;
+	height: 290px;
 	/* margin-top: 5px; */
 	overflow-y: auto;
-	border-radius: 00px 0px 30px 30px;
+	border-radius: 00px 0px 25px 25px;
 	width: 120px;
 }
 
@@ -216,8 +216,8 @@ a {
 	-o-appearance: none;
 	appearance: none;
 
-	width: 12px;
-	height: 12px;
+	width: 14px;
+	height: 14px;
 	
 	box-shadow: 0 0 0 1px black; 
 	border-radius: 2px;
@@ -291,8 +291,8 @@ a {
 	-o-appearance: none;
 	appearance: none;
 
-	width: 12px;
-	height: 12px;
+	width: 14px;
+	height: 14px;
 	
 	box-shadow: 0 0 0 1px black; /* Outer border */
 	/* border: 3px solid white; Inner border */
@@ -317,7 +317,7 @@ button.high-contrast {
 }
 
 .access-checkbox label {
-	vertical-align: top;
+	vertical-align: super;
 	font-size: 13.5px;
 	font-weight: bold;
 	/* padding-left: 1px; */
@@ -442,9 +442,9 @@ button.high-contrast {
 .pagination a.active {
 	background-color: #133162;
 	color: white;
-	border-radius: 100%;
-	padding-left: 12px;
-	padding-right: 12px;
+	border-radius: 25px;
+	padding-left: 14px;
+	padding-right: 14px;
 
 }
 
