@@ -241,10 +241,52 @@ a {
 	margin-right: 25px;
 }
 
-.access-checkbox label{
+/* Accessibility Checkboxes */
+.access-checkbox{
+	cursor: pointer;
+}
+.access-checkbox input{
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.access-checkbox label {
+	vertical-align: top;
 	font-size: 14px;
 	font-weight: bold;
+	padding-left: 25px;
 }
+
+.access-checkbox > [type="checkbox"] + label:before {
+	content: '';
+	position: absolute;
+	left: 30px;
+	height: 12px;
+	width: 12px;
+	border: 1px solid black;
+	border-radius: 2.5px;
+	font-size: 15px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.access-checkbox > [type="checkbox"]:checked + label:before {
+	background-color: #133162;
+	content: '';
+	position: absolute;
+	left: 30px;
+	height: 12px;
+	width: 12px;
+	border: 1px solid black;
+	border-radius: 2.5px;
+	font-size: 15px;
+	text-align: center;
+	cursor: pointer;
+}
+
 #acc-hr{
 	width: 133px;
 	background-color: #D9D9D9;
