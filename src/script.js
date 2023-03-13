@@ -174,16 +174,21 @@ accessBtn.addEventListener('click', function() {
 
 /* Bold Feature */
 const accessBold = document.getElementById('access-bold');
+const tileLeft = document.getElementsByClassName('text-category');
 accessBold.addEventListener('change', function() {
   if (this.checked) {
-    console.log('entered1');
     for (let i = 0; i < accessText.length; i++) {
       accessText[i].classList.add('bold-text');
     }
+    for (let i = 0; i < tileLeft.length; i++) {
+      tileLeft[i].classList.add('bold-text');
+    }
   } else {
-    console.log('entered2');
     for (let i = 0; i < accessText.length; i++) {
       accessText[i].classList.remove('bold-text');
+    }
+    for (let i = 0; i < tileLeft.length; i++) {
+      tileLeft[i].classList.remove('bold-text');
     }
   }
 });
@@ -191,9 +196,12 @@ accessBold.addEventListener('change', function() {
 /* Color Blind Feature */
 const accessColor = document.getElementById('access-color');
 accessColor.addEventListener('change', function() {
+  const header = document.querySelector('#header')
   if (this.checked) {
+    header.style.filter = 'grayscale(100%)'
     colorBlindFunc(true)
   } else {
+    header.style.filter = 'none';
     colorBlindFunc(false)
   }
 });
