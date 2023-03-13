@@ -210,6 +210,10 @@ function colorBlindFunc(value) {
     learnBtn.forEach(lb => {
       lb.classList.add('high-contrast')
     });
+
+    // change header background to black
+    document.getElementsByTagName('header')[0].style.backgroundColor = "black";
+    document.getElementById('option-group').style.backgroundColor = "#86868A";
     filterBtn.classList.add('high-contrast');
     accBtn.classList.add('high-contrast');
   } else {
@@ -219,6 +223,11 @@ function colorBlindFunc(value) {
     learnBtn.forEach(lb => {
       lb.classList.remove('high-contrast')
     });
+
+    // change headerbackground to blue
+    document.getElementsByTagName('header')[0].style.backgroundColor = "#133162";
+    document.getElementById('option-group').style.backgroundColor = "#F6C749";
+
     filterBtn.classList.remove('high-contrast');
     accBtn.classList.remove('high-contrast');
   }
