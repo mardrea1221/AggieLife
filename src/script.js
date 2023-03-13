@@ -226,15 +226,19 @@ function colorBlindFunc(value) {
 
 /* Learn Button*/
 const modal = document.getElementById("some-modal");
-const learnBtn1 = document.getElementById("learn-btn");
+const learnBtn1 = document.querySelectorAll('#learn-btn');
 const learnimg = document.getElementById("learn-pic");
-learnBtn1.addEventListener("click", () => {
-  if (modal.style.display === 'block') {
-    modal.style.display = 'none';
-  } else {
-    modal.style.display = 'block';
-  }
+
+learnBtn1.forEach(learn => {
+  learn.addEventListener("click", () => {
+    if (modal.style.display === 'block') {
+      modal.style.display = 'none';
+    } else {
+      modal.style.display = 'block';
+    }
+  });
 });
+
 
 window.onclick = function(event) {
   if (event.target == modal) {
