@@ -196,12 +196,9 @@ accessBold.addEventListener('change', function() {
 /* Color Blind Feature */
 const accessColor = document.getElementById('access-color');
 accessColor.addEventListener('change', function() {
-  const header = document.querySelector('#header')
   if (this.checked) {
-    header.style.filter = 'grayscale(100%)'
     colorBlindFunc(true)
   } else {
-    header.style.filter = 'none';
     colorBlindFunc(false)
   }
 });
@@ -209,8 +206,14 @@ accessColor.addEventListener('change', function() {
 function colorBlindFunc(value) {
   const tileCorner = document.querySelectorAll('.tile-leftcorner');
   const learnBtn = document.querySelectorAll('.tile-buttons');
+  const pagn = document.querySelector('.pagination'); 
   const accBtn = document.getElementById('accessibility-btn');
   const filterBtn = document.getElementById('filter-btn');
+  document.addEventListener("DOMContentLoaded", function() {
+    const header = document.getElementsByTagName("header")[0];
+    if (value) { header.classList.add('high-contrast');}
+    else {header.classList.remove('high-contrast');}
+  });
   if (value) { 
     tileCorner.forEach(tc => {
       tc.classList.add('high-contrast')
@@ -224,6 +227,7 @@ function colorBlindFunc(value) {
     document.getElementById('option-group').style.backgroundColor = "#86868A";
     filterBtn.classList.add('high-contrast');
     accBtn.classList.add('high-contrast');
+    pagn.classList.add('high-contrast');
   } else {
     tileCorner.forEach(tc => {
       tc.classList.remove('high-contrast')
@@ -238,6 +242,7 @@ function colorBlindFunc(value) {
 
     filterBtn.classList.remove('high-contrast');
     accBtn.classList.remove('high-contrast');
+    pagn.classList.remove('high-contrast');
   }
 }
 
