@@ -223,3 +223,23 @@ function colorBlindFunc(value) {
     accBtn.classList.remove('high-contrast');
   }
 }
+
+/* Learn Button*/
+const modal = document.getElementById("some-modal");
+const learnBtn1 = document.getElementById("learn-btn");
+const learnimg = document.getElementById("learn-pic");
+learnBtn1.addEventListener("click", () => {
+  if (modal.style.display === 'block') {
+    modal.style.display = 'none';
+  } else {
+    modal.style.display = 'block';
+  }
+});
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+/*Join Button*/
