@@ -259,6 +259,7 @@ a {
 	font-size: 18px;
 	font-weight: 500;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	cursor: pointer;
 	/* z-index: 1000;  */
 }
 
@@ -412,6 +413,7 @@ button.high-contrast {
 	cursor: pointer;
 }
 
+
 /* #learn-pic{
 	display: block;
 	margin: auto;
@@ -436,6 +438,7 @@ button.high-contrast {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 #disp-join > img{
