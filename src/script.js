@@ -225,25 +225,41 @@ function colorBlindFunc(value) {
 }
 
 /* Learn Button*/
-const modal = document.getElementById("some-modal");
+const learn_modal = document.getElementById("some-modal");
 const learnBtn1 = document.querySelectorAll('#learn-btn');
 const learnimg = document.getElementById("learn-pic");
 
 learnBtn1.forEach(learn => {
   learn.addEventListener("click", () => {
-    if (modal.style.display === 'block') {
-      modal.style.display = 'none';
+    if (learn_modal.style.display === 'block') {
+      learn_modal.style.display = 'none';
     } else {
-      modal.style.display = 'block';
+      learn_modal.style.display = 'block';
     }
   });
 });
 
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
 /*Join Button*/
+const join_modal = document.getElementById("join-modal");
+const joinBtn1 = document.querySelectorAll('#join-btn');
+const joinimg = document.getElementById("join-pic");
+
+  joinBtn1.forEach(join => {
+  join.addEventListener("click", () => {
+    if (join_modal.style.display === 'block') {
+      join_modal.style.display = 'none';
+    } else {
+      join_modal.style.display = 'block';
+    }
+  });
+});
+
+window.onclick = function(event) {
+  if (event.target == learn_modal) {
+    learn_modal.style.display = "none";
+  }
+  if (event.target == join_modal) {
+    join_modal.style.display = "none";
+  }
+};

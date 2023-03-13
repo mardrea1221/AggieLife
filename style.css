@@ -437,6 +437,13 @@ button.high-contrast {
 	font-weight: bold;
 }
 
+#disp-join > img{
+	/* position: relative;  */
+	display: block;
+	margin: auto;
+	width: 50%;
+} 
+
 /* Show learn more */
 .modal{
 	display: none;
