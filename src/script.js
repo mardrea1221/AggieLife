@@ -273,6 +273,21 @@ const joinimg = document.getElementById("join-pic");
   });
 });
 
+/* activity icon*/
+const activity_modal = document.getElementById("activity-modal");
+const activityLogos = document.querySelectorAll('#club-logos');
+const activityimg = document.getElementById("activity-pic");
+
+activityLogos.forEach(activity => {
+  activity.addEventListener("click", () => {
+    if (activity_modal.style.display === 'block') {
+      activity_modal.style.display = 'none';
+    } else {
+      activity_modal.style.display = 'block';
+    }
+  });
+});
+
 window.onclick = function(event) {
   if (event.target == learn_modal) {
     learn_modal.style.display = "none";
@@ -280,4 +295,8 @@ window.onclick = function(event) {
   if (event.target == join_modal) {
     join_modal.style.display = "none";
   }
+  if (event.target == activity_modal) {
+    activity_modal.style.display = "none";
+  }
 };
+

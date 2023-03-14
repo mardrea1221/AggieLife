@@ -429,6 +429,8 @@ button.high-contrast {
 	width: 40%;
 	/* height: 500px; */
 } 
+
+
 #join-btn{
 	width: 150px;
 	height: 40px;
@@ -444,6 +446,15 @@ button.high-contrast {
 }
 
 #disp-join > img{
+	/* position: relative;  */
+	display: block;
+	/* margin: auto;*/
+	margin:auto;
+	margin-top: 15%;
+	width: 20%;
+} 
+
+#disp-activity > img{
 	/* position: relative;  */
 	display: block;
 	/* margin: auto;*/
