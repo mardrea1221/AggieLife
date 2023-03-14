@@ -209,17 +209,29 @@ function colorBlindFunc(value) {
   const pagn = document.querySelector('.pagination'); 
   const accBtn = document.getElementById('accessibility-btn');
   const filterBtn = document.getElementById('filter-btn');
+  const checkBoxes = document.querySelectorAll('.access-checkbox > input');
+  const logos = document.querySelectorAll('#club-logos');
   if (value) { 
     tileCorner.forEach(tc => {
-      tc.classList.add('high-contrast')
+      tc.classList.add('high-contrast');
     });
     learnBtn.forEach(lb => {
-      lb.classList.add('high-contrast')
+      lb.classList.add('high-contrast');
+    });
+    checkBoxes.forEach(lb => {
+      lb.classList.add('high-contrast');
+    });
+    logos.forEach(lg => {
+      lg.classList.add('high-contrast');
     });
 
     // change header background to black
-    document.getElementsByTagName('header')[0].style.backgroundColor = "black";
-    document.getElementById('option-group').style.backgroundColor = "#86868A";
+    document.getElementsByTagName('header')[0].classList.add('high-contrast');
+    // document.getElementsByTagName('header')[0].style.backgroundColor = "black";
+    // document.getElementById('option-group').style.backgroundColor = "#86868A";
+    document.getElementById("activity-pic").classList.add('high-contrast');;
+    document.getElementById("learn-pic").classList.add('high-contrast');;
+    document.getElementById("join-pic").classList.add('high-contrast');;
 
     filterBtn.classList.add('high-contrast');
     accBtn.classList.add('high-contrast');
@@ -231,10 +243,21 @@ function colorBlindFunc(value) {
     learnBtn.forEach(lb => {
       lb.classList.remove('high-contrast')
     }); 
+    checkBoxes.forEach(lb => {
+      lb.classList.remove('high-contrast');
+    });
+    logos.forEach(lg => {
+      lg.classList.remove('high-contrast');
+    });
 
     // change headerbackground to blue
-      document.getElementsByTagName('header')[0].style.backgroundColor = "#133162";
-      document.getElementById('option-group').style.backgroundColor = "#F6C749";
+    // document.getElementsByTagName('header')[0].style.backgroundColor = "#133162";
+    // document.getElementById('option-group').style.backgroundColor = "#F6C749";
+    document.getElementsByTagName('header')[0].classList.remove('high-contrast');
+    document.getElementById("activity-pic").classList.remove('high-contrast');;
+    document.getElementById("learn-pic").classList.remove('high-contrast');;
+    document.getElementById("join-pic").classList.remove('high-contrast');;
+
 
     filterBtn.classList.remove('high-contrast');
     accBtn.classList.remove('high-contrast');
