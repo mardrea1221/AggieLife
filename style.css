@@ -261,6 +261,7 @@ a {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	cursor: pointer;
 	/* z-index: 1000;  */
+	cursor: pointer;
 }
 
 /* Accessibility Dropdown */
@@ -424,7 +425,8 @@ button.high-contrast {
 	/* position: relative;  */
 	display: block;
 	margin: auto;
-	width: 50%;
+	margin-top: 8%;
+	width: 40%;
 	/* height: 500px; */
 } 
 #join-btn{
@@ -444,8 +446,10 @@ button.high-contrast {
 #disp-join > img{
 	/* position: relative;  */
 	display: block;
-	margin: auto;
-	width: 50%;
+	/* margin: auto;*/
+	margin:auto;
+	margin-top: 15%;
+	width: 20%;
 } 
 
 /* Show learn more */
@@ -483,8 +487,8 @@ button.high-contrast {
 	background-color: #133162;
 	color: white;
 	border-radius: 25px;
-	padding-left: 14px;
-	padding-right: 14px;
+	padding-left: 13px;
+	padding-right: 13px;
 
 }
 
@@ -571,3 +575,6 @@ button.high-contrast {
 	z-index: 2;
 }
 
+#club-logos {
+	cursor: help;
+}
