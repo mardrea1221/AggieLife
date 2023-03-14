@@ -209,21 +209,6 @@ function colorBlindFunc(value) {
   const pagn = document.querySelector('.pagination'); 
   const accBtn = document.getElementById('accessibility-btn');
   const filterBtn = document.getElementById('filter-btn');
-  document.addEventListener("DOMContentLoaded", function() {
-    // const header = document.getElementsByTagName("header")[0];
-    if (value) { 
-      // header.classList.add('high-contrast');
-      // change header background to black
-      document.getElementsByTagName('header')[0].style.backgroundColor = "black";
-      document.getElementById('option-group').style.backgroundColor = "#86868A";
-    }
-    else {
-      // header.classList.remove('high-contrast');
-      // change headerbackground to blue
-      document.getElementsByTagName('header')[0].style.backgroundColor = "#133162";
-      document.getElementById('option-group').style.backgroundColor = "#F6C749";
-    }
-  });
   if (value) { 
     tileCorner.forEach(tc => {
       tc.classList.add('high-contrast')
@@ -231,6 +216,10 @@ function colorBlindFunc(value) {
     learnBtn.forEach(lb => {
       lb.classList.add('high-contrast')
     });
+
+    // change header background to black
+    document.getElementsByTagName('header')[0].style.backgroundColor = "black";
+    document.getElementById('option-group').style.backgroundColor = "#86868A";
 
     filterBtn.classList.add('high-contrast');
     accBtn.classList.add('high-contrast');
@@ -241,8 +230,11 @@ function colorBlindFunc(value) {
     });
     learnBtn.forEach(lb => {
       lb.classList.remove('high-contrast')
-    });
+    }); 
 
+    // change headerbackground to blue
+      document.getElementsByTagName('header')[0].style.backgroundColor = "#133162";
+      document.getElementById('option-group').style.backgroundColor = "#F6C749";
 
     filterBtn.classList.remove('high-contrast');
     accBtn.classList.remove('high-contrast');
