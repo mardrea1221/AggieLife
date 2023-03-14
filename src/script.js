@@ -209,7 +209,8 @@ function colorBlindFunc(value) {
   const pagn = document.querySelector('.pagination'); 
   const accBtn = document.getElementById('accessibility-btn');
   const filterBtn = document.getElementById('filter-btn');
-  const checkBoxes = document.querySelectorAll('.access-checkbox > input');
+  const checkBoxesAccess = document.querySelectorAll('.access-checkbox > input');
+  const checkBoxesFilter = document.querySelectorAll('.filter-checkbox > input');
   const logos = document.querySelectorAll('#club-logos');
   if (value) { 
     tileCorner.forEach(tc => {
@@ -218,7 +219,10 @@ function colorBlindFunc(value) {
     learnBtn.forEach(lb => {
       lb.classList.add('high-contrast');
     });
-    checkBoxes.forEach(lb => {
+    checkBoxesAccess.forEach(lb => {
+      lb.classList.add('high-contrast');
+    });
+    checkBoxesFilter.forEach(lb => {
       lb.classList.add('high-contrast');
     });
     logos.forEach(lg => {
@@ -243,7 +247,10 @@ function colorBlindFunc(value) {
     learnBtn.forEach(lb => {
       lb.classList.remove('high-contrast')
     }); 
-    checkBoxes.forEach(lb => {
+    checkBoxesAccess.forEach(lb => {
+      lb.classList.remove('high-contrast');
+    });
+    checkBoxesFilter.forEach(lb => {
       lb.classList.remove('high-contrast');
     });
     logos.forEach(lg => {
