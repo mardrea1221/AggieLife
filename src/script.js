@@ -273,10 +273,38 @@ function colorBlindFunc(value) {
 }
 
 /* Learn Button*/
+const tiles = document.querySelectorAll('.tile');
+const learnModal = document.getElementById("some-modal");
+const joinModal = document.getElementById('join-modal');
+const joinPic = document.getElementById('join-pic');
+const learnPic = document.getElementById('learn-pic');
+for (let i = 0; i < tiles.length; ++i) {
+  const index = i + 1;
+  const learnBtn = tiles[i].querySelector('#learn-btn');
+  const joinBtn = tiles[i].querySelector('#join-btn');
+  learnBtn.addEventListener('click', () => {
+    learnPic.src = `/assets/About Us ${index}.png`;
+    if (learnModal.style.display === 'block') {
+      learnModal.style.display = 'none';
+    } else {
+      learnModal.style.display = 'block';
+    }
+  });
+  joinBtn.addEventListener('click', () => {
+    joinPic.src = `/assets/Thanks for joining ${index}.png`;
+    if (joinModal.style.display === 'block') {
+      joinModal.style.display = 'none';
+    } else {
+      joinModal.style.display = 'block';
+    }
+  });
+}
+
+
 const learn_modal = document.getElementById("some-modal");
 const learnBtn1 = document.querySelectorAll('#learn-btn');
 const learnimg = document.getElementById("learn-pic");
-
+/*
 learnBtn1.forEach(learn => {
   learn.addEventListener("click", () => {
     if (learn_modal.style.display === 'block') {
@@ -286,11 +314,13 @@ learnBtn1.forEach(learn => {
     }
   });
 });
+*/
 
 
 /*Join Button*/
 const join_modal = document.getElementById("join-modal");
 const joinBtn1 = document.querySelectorAll('#join-btn');
+/*
 const joinimg = document.getElementById("join-pic");
 
   joinBtn1.forEach(join => {
@@ -302,6 +332,7 @@ const joinimg = document.getElementById("join-pic");
     }
   });
 });
+*/
 
 /* activity icon*/
 const activity_modal = document.getElementById("activity-modal");
