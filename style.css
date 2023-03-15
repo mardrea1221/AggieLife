@@ -425,8 +425,8 @@ button.high-contrast {
 	/* position: relative;  */
 	display: block;
 	margin: auto;
-	margin-top: 8%;
-	width: 40%;
+	margin-top: 5%;
+	width: 50%;
 	/* height: 500px; */
 } 
 
@@ -450,8 +450,8 @@ button.high-contrast {
 	display: block;
 	/* margin: auto;*/
 	margin:auto;
-	margin-top: 15%;
-	width: 20%;
+	margin-top: 10%;
+	width: 30%;
 } 
 
 #disp-activity > img{
@@ -459,8 +459,8 @@ button.high-contrast {
 	display: block;
 	/* margin: auto;*/
 	margin:auto;
-	margin-top: 15%;
-	width: 20%;
+	margin-top: 12%;
+	width: 30%;
 } 
 
 /* Show learn more */
